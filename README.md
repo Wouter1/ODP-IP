@@ -1,10 +1,23 @@
+
 ODP-IP
 ======
 
 Exact Algorithms for "Complete Set Partitioning" (i.e., for "Coalition Structure Generation").
+This project was copied from https://github.com/trahwan/ODP-IP 
+and then fixed to work with maven 
 
-To download the project, click on the "Download ZIP" button. It will take a while to download the 6.5 MB file.
 
+* Import as maven project (eg in Eclipse) 
+* Run solveParticularProblem/SolveParticularProblem
+
+
+You will get a GUI that is set up already to run the example file that is explained below.
+Press Run.
+The GUI will show the optimal solution.
+
+
+Details
+=======
   * This code contains implementations of the following algorithms: IP, ODP-IP, DP, ODP, and IDP (which is the size version of ODP)
 
   * For more on the optimization problem itself, or the algorithms, see: http://www.cs.ox.ac.uk/files/5616/CS-RR-13-09.pdf
