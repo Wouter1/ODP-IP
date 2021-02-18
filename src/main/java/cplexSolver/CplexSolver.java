@@ -20,6 +20,7 @@ public class CplexSolver
 	 */
 	public void solve( Input input, Result result )
 	{
+		System.err.println("WARNING CplexSolve.solve is broken. Fix the code first!");
 		try
 		{	
 			//Solve the optimization problem using CPLEX
@@ -27,11 +28,12 @@ public class CplexSolver
 			IloCplex cplex = new IloCplex();
 			IloNumVar[][] var = new IloNumVar[1][];
 			IloRange[][] rng = new IloRange[1][];
-			populateMatrix(cplex, var, rng, input.numOfAgents, input.coalitionValuesAsHashTable);
+			// BROKEN
+			//populateMatrix(cplex, var, rng, input.numOfAgents, input.coalitionValuesAsHashTable);
 			cplex.setParam(IloCplex.BooleanParam.PreInd, false);
 			long timeElapsed = System.currentTimeMillis()-startTime;
 
-			if( cplex.runDPorIDP() ) //If CPLEX has found a solution
+			if(false) //BROKEN  cplex.runDPorIDP() ) //If CPLEX has found a solution
 			{
 				optimizationResult = cplex.getValues(var[0]);
 				setBestCSFoundByCPLEX( input.numOfAgents, optimizationResult );
@@ -48,7 +50,8 @@ public class CplexSolver
 			
 			result.cplexTime = timeElapsed;
 			result.cplexBestCSFound = bestCSFoundByCPLEX;
-			result.cplexValueOfBestCS = objectiveValue;	
+			// BRONEK
+			//result.cplexValueOfBestCS = objectiveValue;	
 		}
 		catch (IloException e) {
 			System.err.println("Concert exception caught '" + e + "' caught");

@@ -242,7 +242,7 @@ public class MainFrame extends JFrame
 		
 		contentPane.add(numOfAgents_textField);
 		numOfAgents_textField.setBounds(new Rectangle(840, 15, 38, 22));
-		numOfAgents_textField.setText("");
+		numOfAgents_textField.setText("4");
 
 		contentPane.add(jPanel1);
 		contentPane.add(jPanel5);
@@ -267,7 +267,7 @@ public class MainFrame extends JFrame
 
 		jPanel1.add(inputAndOutputPathAndFolderName_textField);
 		inputAndOutputPathAndFolderName_textField.setBounds(new Rectangle(10, 55, 290, 22));
-		inputAndOutputPathAndFolderName_textField.setText("e.g., D:/InputFolder");
+		inputAndOutputPathAndFolderName_textField.setText("src/main/resources/values1");
 		
 		jPanel1.add(jLabel16);
 		jLabel16.setBounds(new Rectangle(10, 75, 290, 50));
