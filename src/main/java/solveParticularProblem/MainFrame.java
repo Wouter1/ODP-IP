@@ -275,7 +275,7 @@ public class MainFrame extends JFrame
 		
 		jPanel1.add(inputFileName_textField);
 		inputFileName_textField.setBounds(new Rectangle(10, 120, 290, 22));
-		inputFileName_textField.setText("e.g., coalitionValues.txt");
+		inputFileName_textField.setText("coalitionValues.txt");
 		
 		//8888888888888888888888888888888888888888888888888888888888888888888888888888888
 		//888888888888888888888888             jPanel7           888888888888888888888888
